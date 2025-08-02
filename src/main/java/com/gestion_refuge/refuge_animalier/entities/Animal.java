@@ -1,5 +1,6 @@
 package com.gestion_refuge.refuge_animalier.entities;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import jakarta.persistence.*;
 import lombok.Data;
 
@@ -21,5 +22,6 @@ public class Animal {
     private String health;
     private String picture;
     @ManyToOne
+    @JsonBackReference
     private Box boxId;
 }

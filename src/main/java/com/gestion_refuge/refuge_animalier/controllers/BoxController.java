@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -23,17 +24,17 @@ public class BoxController {
         return new ResponseEntity<>(boxService.getAllBoxes(), HttpStatus.OK);
     }
 
-    @GetMapping
-    public ResponseEntity<Integer> getBoxById(Long boxId) {
+    @GetMapping("/{boxId}")
+    public ResponseEntity<Integer> getBoxById(@PathVariable Long boxId) {
         return ResponseEntity.ok(0);
     }
 
-    @GetMapping
+    @GetMapping("/total")
     public ResponseEntity<Integer> getNumberOfBoxes() {
         return ResponseEntity.ok(0);
     }
 
-    @GetMapping
+    @GetMapping("/empty")
     public ResponseEntity<Integer> getNumberOfEmptyBoxes() {
         return ResponseEntity.ok(0);
     }

@@ -1,5 +1,6 @@
 package com.gestion_refuge.refuge_animalier.entities;
 
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.*;
 import lombok.Data;
 
@@ -16,5 +17,6 @@ public class Box {
     private int capacity;
     private String address;
     @OneToMany(mappedBy = "boxId")
+    @JsonManagedReference
     private List<Animal> animals;
 }
