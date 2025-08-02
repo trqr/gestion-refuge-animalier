@@ -7,15 +7,14 @@ import java.time.LocalDate;
 
 @Entity
 @Data
-public class HealthCare {
+public class Adoption {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private String type;
-    @ManyToOne
-    private Veterinarian veterinarianId;
+    private String status;
     private LocalDate date;
-    private String description;
     @ManyToOne
-    private Animal AnimalId;
+    private Animal animalId;
+    @ManyToOne
+    private Adopter adopterId;
 }
