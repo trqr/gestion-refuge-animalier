@@ -1,5 +1,6 @@
 package com.gestion_refuge.refuge_animalier.controllers;
 
+import com.gestion_refuge.refuge_animalier.dtos.BoxAvaibilityResponseDTO;
 import com.gestion_refuge.refuge_animalier.entities.Box;
 import com.gestion_refuge.refuge_animalier.services.BoxService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -25,17 +26,22 @@ public class BoxController {
     }
 
     @GetMapping("/{boxId}")
-    public ResponseEntity<Integer> getBoxById(@PathVariable Long boxId) {
-        return ResponseEntity.ok(0);
+    public ResponseEntity<Box> getBoxById(@PathVariable Long boxId) {
+        return new ResponseEntity<>(boxService.getBoxById(boxId), HttpStatus.OK);
     }
 
     @GetMapping("/total")
-    public ResponseEntity<Integer> getNumberOfBoxes() {
-        return ResponseEntity.ok(0);
+    public ResponseEntity<Long> getNumberOfBoxes() {
+        return new ResponseEntity<>(boxService.getNumberOfBoxes(), HttpStatus.OK);
     }
 
-    @GetMapping("/empty")
-    public ResponseEntity<Integer> getNumberOfEmptyBoxes() {
-        return ResponseEntity.ok(0);
+    @GetMapping("/usedNb")
+    public ResponseEntity<Long> getNumberOfUsedBoxes() {
+        return new ResponseEntity<>(boxService.getNumberOfUsedBoxes(), HttpStatus.OK);
+    }
+
+    @GetMapping("/avaibility")
+    public ResponseEntity<List<BoxAvaibilityResponseDTO>> getBoxesAvailability(){
+        return new ResponseEntity<>(boxService.getBoxesAvailability(), HttpStatus.OK);
     }
 }
