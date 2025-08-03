@@ -13,7 +13,7 @@ public interface BoxRepository extends JpaRepository<Box, Long> {
 
     @Query(value = """
     SELECT 
-        b.id AS boxId,
+        b.id AS id,
         b.name AS name,
         b.capacity AS capacity,
         COUNT(a.id) AS occupied,

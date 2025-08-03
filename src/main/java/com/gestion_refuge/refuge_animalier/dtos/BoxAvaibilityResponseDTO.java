@@ -6,7 +6,7 @@ import lombok.Data;
 @Data
 @AllArgsConstructor
 public class BoxAvaibilityResponseDTO {
-    private Long boxId;
+    private Long id;
     private String name;
     private Integer capacity;
     private Long occupied;
