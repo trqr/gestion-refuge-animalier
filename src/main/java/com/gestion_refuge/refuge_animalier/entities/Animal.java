@@ -5,6 +5,7 @@ import jakarta.persistence.*;
 import lombok.Data;
 
 import java.time.LocalDate;
+import java.time.LocalDateTime;
 
 @Entity
 @Data
@@ -17,7 +18,7 @@ public class Animal {
     private String race;
     private String sex;
     private LocalDate birthDate;
-    private LocalDate arrivalDate;
+    private LocalDate arrivalDate = LocalDate.now();
     private String behaviour;
     private String health;
     private String picture;
