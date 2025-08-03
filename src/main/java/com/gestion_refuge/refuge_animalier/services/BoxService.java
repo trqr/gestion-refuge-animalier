@@ -1,6 +1,7 @@
 package com.gestion_refuge.refuge_animalier.services;
 
 import com.gestion_refuge.refuge_animalier.dtos.BoxAvaibilityResponseDTO;
+import com.gestion_refuge.refuge_animalier.dtos.BoxRequestDTO;
 import com.gestion_refuge.refuge_animalier.entities.Box;
 import com.gestion_refuge.refuge_animalier.repositories.BoxRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -33,5 +34,16 @@ public class BoxService {
 
     public List<BoxAvaibilityResponseDTO> getBoxesAvailability(){
         return boxRepository.getBoxAvailability();
+    }
+
+    public Box createBox(BoxRequestDTO request) {
+
+        Box created = new Box();
+        created.setName(request.getName());
+        created.setType(request.getType());
+        created.setCapacity(request.getCapacity());
+        created.setAddress(request.getAddress());
+
+        return boxRepository.save(created);
     }
 }

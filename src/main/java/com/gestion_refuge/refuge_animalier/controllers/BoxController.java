@@ -1,15 +1,14 @@
 package com.gestion_refuge.refuge_animalier.controllers;
 
 import com.gestion_refuge.refuge_animalier.dtos.BoxAvaibilityResponseDTO;
+import com.gestion_refuge.refuge_animalier.dtos.BoxRequestDTO;
 import com.gestion_refuge.refuge_animalier.entities.Box;
 import com.gestion_refuge.refuge_animalier.services.BoxService;
+import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -43,5 +42,10 @@ public class BoxController {
     @GetMapping("/avaibility")
     public ResponseEntity<List<BoxAvaibilityResponseDTO>> getBoxesAvailability(){
         return new ResponseEntity<>(boxService.getBoxesAvailability(), HttpStatus.OK);
+    }
+
+    @PostMapping("/create")
+    public ResponseEntity<Box> createBox(@Valid @RequestBody BoxRequestDTO request){
+        return new ResponseEntity<>(boxService.createBox(request), HttpStatus.CREATED);
     }
 }
