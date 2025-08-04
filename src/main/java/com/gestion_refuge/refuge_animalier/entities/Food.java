@@ -14,5 +14,5 @@ public class Food {
     private String frequency;
     private String description;
     @ManyToOne
-    private Animal animalId;
+    private Animal animal;
 }

@@ -38,7 +38,7 @@ public class AnimalService {
         created.setBehaviour(request.getBehaviour());
         created.setHealth(request.getHealth());
         created.setPicture(request.getPicture());
-        created.setBoxId(newAnimalBox);
+        created.setBox(newAnimalBox);
 
         return animalRepository.save(created);
     }
@@ -50,7 +50,7 @@ public class AnimalService {
     public Animal changeBox(Long id, Long boxId) {
         Animal animal = getAnimalById(id);
         Box newBox = boxService.getBoxById(boxId);
-        animal.setBoxId(newBox);
+        animal.setBox(newBox);
         return animalRepository.save(animal);
     }
 }

@@ -16,7 +16,7 @@ public class Box {
     private String type;
     private int capacity;
     private String address;
-    @OneToMany(mappedBy = "boxId")
+    @OneToMany(mappedBy = "box")
     @JsonManagedReference
     private List<Animal> animals;
 }

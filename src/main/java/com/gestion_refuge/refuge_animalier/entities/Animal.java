@@ -24,5 +24,5 @@ public class Animal {
     private String picture;
     @ManyToOne
     @JsonBackReference
-    private Box boxId;
+    private Box box;
 }

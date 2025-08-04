@@ -1,10 +1,56 @@
 INSERT INTO box (id, name, type, capacity, address) VALUES
 (1, 'Box A1', 'Individuelle', 1, 'Zone Nord'),
-(2, 'Box B2', 'Collective', 5, 'Zone Est'),
-(3, 'Box C3', 'Individuelle', 1, 'Zone Sud');
+(2, 'Box B2', 'Collective', 4, 'Zone Est'),
+(3, 'Box C3', 'Individuelle', 1, 'Zone Sud'),
+(4, 'Box D4', 'Collective', 3, 'Zone Ouest'),
+(5, 'Box E5', 'Individuelle', 1, 'Zone Centrale'),
+(6, 'Box F6', 'Collective', 5, 'Zone Est'),
+(7, 'Box G7', 'Collective', 4, 'Zone Nord'),
+(8, 'Box H8', 'Individuelle', 1, 'Zone Sud'),
+(9, 'Box I9', 'Collective', 3, 'Zone Ouest'),
+(10, 'Box J10', 'Individuelle', 1, 'Zone Centrale');
 
-INSERT INTO animal (id, name, type, race, sex, birth_date, arrival_date, behaviour, health, picture, box_id_id) VALUES
-(1, 'Rex', 'Chien', 'Berger Allemand', 'M', '2018-04-12', '2025-06-01', 'Protecteur', 'Bon', 'https://www.francebleu.fr/s3/cruiser-production/2024/01/ad705aba-0194-404b-8de9-b7c70f5bdced/1200x680_sc_maxstockworld419083.jpg', 1),
-(2, 'Mia', 'Chat', 'Siamois', 'F', '2020-08-20', '2025-06-15', 'Calme', 'Allergie légère', 'https://www.la-spa.fr/app/app/uploads/2023/07/prendre-soin_duree-vie-chat.jpg', 2),
-(3, 'Oscar', 'Chien', 'Labrador', 'M', '2017-11-05', '2025-05-10', 'Joueur', 'Surpoids', 'https://images.ctfassets.net/denf86kkcx7r/2Ghp9VQgpJxmXD14Bb3mva/43352c7e00f45cf55c464ef46f8d44ac/quelle-est-esperance-vie-chiens-13', 2),
-(4, 'Nala', 'Chat', 'Maine Coon', 'F', '2021-02-14', '2025-07-01', 'Curieuse', 'Bon', 'https://cdn.shopify.com/s/files/1/0265/1327/7008/files/nom-de-chat.jpg?v=1727441136', 3);
+
+INSERT INTO animal (id, name, type, race, sex, birth_date, arrival_date, behaviour, health, picture, box_id) VALUES
+(1, 'Rex', 'Chien', 'Berger Allemand', 'M', '2018-04-12', '2025-06-01', 'Protecteur', 'Bon', 'https://images.unsplash.com/photo-1619983081563-d5ef2de763b7', 1),
+(2, 'Mia', 'Chat', 'Siamois', 'F', '2020-08-20', '2025-06-15', 'Calme', 'Allergie légère', 'https://images.unsplash.com/photo-1592194996308-7b43878e84a6', 2),
+(3, 'Oscar', 'Chien', 'Labrador', 'M', '2017-11-05', '2025-05-10', 'Joueur', 'Surpoids', 'https://images.unsplash.com/photo-1560743641-3914f2c45636', 2),
+(4, 'Nala', 'Chat', 'Maine Coon', 'F', '2021-02-14', '2025-07-01', 'Curieuse', 'Bon', 'https://images.unsplash.com/photo-1592194996308-7b43878e84a6', 3),
+(5, 'Toby', 'Chien', 'Golden Retriever', 'M', '2019-06-23', '2025-06-20', 'Affectueux', 'Bon', 'https://images.unsplash.com/photo-1558788353-f76d92427f16', 4),
+(6, 'Luna', 'Chat', 'Persan', 'F', '2022-01-12', '2025-07-15', 'Discrète', 'Asthme léger', 'https://images.unsplash.com/photo-1555685812-4b943f1cb0eb', 4),
+(7, 'Max', 'Chien', 'Border Collie', 'M', '2016-08-09', '2025-05-30', 'Hyperactif', 'Bon', 'https://images.unsplash.com/photo-1601758123927-1969082b3b26', 5),
+(8, 'Chloé', 'Chat', 'Chartreux', 'F', '2019-12-11', '2025-06-25', 'Paisible', 'Bon', 'https://images.unsplash.com/photo-1574158622682-e40e69881006', 5),
+(9, 'Milo', 'Chien', 'Shiba Inu', 'M', '2021-04-01', '2025-06-05', 'Indépendant', 'Bon', 'https://images.unsplash.com/photo-1601758003122-58e5fca11dd1', 6),
+(10, 'Bella', 'Chat', 'Bengal', 'F', '2020-03-22', '2025-06-10', 'Joueuse', 'Bon', 'https://images.unsplash.com/photo-1592194996308-7b43878e84a6', 6),
+(11, 'Rocky', 'Chien', 'Rottweiler', 'M', '2015-07-14', '2025-07-02', 'Protecteur', 'Arthrose', 'https://images.unsplash.com/photo-1596495577886-d920f1fb7238', 7),
+(12, 'Lily', 'Chat', 'Abyssin', 'F', '2021-10-05', '2025-06-30', 'Vive', 'Bon', 'https://images.unsplash.com/photo-1543852786-1cf6624b9987', 7),
+(13, 'Diesel', 'Chien', 'Dobermann', 'M', '2018-09-18', '2025-06-11', 'Calme', 'Bon', 'https://images.unsplash.com/photo-1619982699969-4bcb39c5b371', 7),
+(14, 'Sacha', 'Chat', 'Norvégien', 'F', '2022-05-12', '2025-07-03', 'Curieuse', 'Bon', 'https://images.unsplash.com/photo-1601004890684-d8cbf643f5f2', 8),
+(15, 'Zeus', 'Chien', 'Malinois', 'M', '2020-11-01', '2025-07-08', 'Sportif', 'Bon', 'https://images.unsplash.com/photo-1583511655789-8c3e1c02d57f', 9),
+(16, 'Nino', 'Chat', 'Ragdoll', 'M', '2021-08-10', '2025-06-18', 'Affectueux', 'Bon', 'https://images.unsplash.com/photo-1610986603163-5ec24f4e1db9', 9),
+(17, 'Flamme', 'Chien', 'Beagle', 'F', '2016-03-09', '2025-06-09', 'Sociable', 'Otite chronique', 'https://images.unsplash.com/photo-1568572933382-74d440642117', 9),
+(18, 'Igor', 'Chien', 'Cane Corso', 'M', '2019-01-20', '2025-07-05', 'Docile', 'Bon', 'https://images.unsplash.com/photo-1587486913044-d6389c565b1f', 6),
+(19, 'Gipsy', 'Chat', 'Sphynx', 'F', '2020-09-01', '2025-06-12', 'Pot-de-colle', 'Peau fragile', 'https://images.unsplash.com/photo-1574158622682-e40e69881006', 6),
+(20, 'Jazz', 'Chien', 'Husky', 'M', '2017-12-25', '2025-06-28', 'Très énergique', 'Yeux irrités', 'https://images.unsplash.com/photo-1574158622682-e40e69881006', 4),
+(21, 'Nemo', 'Chat', 'Devon Rex', 'M', '2021-06-30', '2025-07-01', 'Joueur', 'Bon', 'https://images.unsplash.com/photo-1600843381414-47c2b9fce7b5', 3),
+(22, 'Ruby', 'Chien', 'Staffie', 'F', '2018-02-10', '2025-06-17', 'Fidèle', 'Allergie cutanée', 'https://images.unsplash.com/photo-1583337130417-3346a1be7dee', 2),
+(23, 'Canelle', 'Chat', 'Angora Turc', 'F', '2022-09-11', '2025-07-04', 'Douce', 'Bon', 'https://images.unsplash.com/photo-1574158622682-e40e69881006', 2),
+(24, 'Thor', 'Chien', 'Akita Inu', 'M', '2016-06-22', '2025-06-21', 'Calme', 'Bon', 'https://images.unsplash.com/photo-1561037404-61cd46aa6152', 8),
+(25, 'Olympe', 'Chat', 'British Shorthair', 'F', '2020-02-29', '2025-06-30', 'Indépendante', 'Bon', 'https://images.unsplash.com/photo-1583337130417-3346a1be7dee', 1);
+
+INSERT INTO food (id, type, quantity, frequency, description, animal_id) VALUES
+(1, 'Croquettes', 500, '2 fois par jour', 'Croquettes premium pour chien adulte', 1),
+(2, 'Pâtée', 300, '1 fois par jour', 'Pâtée pour chat sensible', 2),
+(3, 'Croquettes', 450, '2 fois par jour', 'Croquettes light pour chien en surpoids', 3),
+(4, 'Croquettes', 400, '2 fois par jour', 'Alimentation pour chat stérilisé', 4),
+(5, 'Croquettes', 600, '2 fois par jour', 'Croquettes riches en protéines pour chien actif', 5),
+(6, 'Pâtée', 250, '1 fois par jour', 'Pâtée au poisson pour chat', 6),
+(7, 'Croquettes', 550, '2 fois par jour', 'Croquettes sans céréales pour chien', 7),
+(8, 'Croquettes', 350, '2 fois par jour', 'Alimentation légère pour chat senior', 8),
+(9, 'Croquettes', 480, '2 fois par jour', 'Croquettes pour chien de petite taille', 9),
+(10, 'Croquettes', 400, '1 fois par jour', 'Croquettes pour chatons en croissance', 10),
+(11, 'Pâtée', 300, '2 fois par jour', 'Pâtée pour chien en convalescence', 11),
+(12, 'Croquettes', 370, '2 fois par jour', 'Croquettes digestes pour chats', 12),
+(13, 'Croquettes', 600, '2 fois par jour', 'Alimentation énergie + pour chien sportif', 13),
+(14, 'Pâtée', 220, '1 fois par jour', 'Pâtée fine pour chat difficile', 14),
+(15, 'Croquettes', 500, '2 fois par jour', 'Croquettes hypoallergéniques', 15);
