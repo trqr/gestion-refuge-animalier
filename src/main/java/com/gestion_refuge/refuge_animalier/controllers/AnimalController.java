@@ -38,4 +38,9 @@ public class AnimalController {
     public ResponseEntity<Animal> addAnimal(@Valid @RequestBody AnimalRequestDTO request){
         return new ResponseEntity<>(animalService.addAnimal(request), HttpStatus.CREATED);
     }
+
+    @PatchMapping("/{id}")
+    public ResponseEntity<Animal> changeBox(@Valid @PathVariable Long id, @RequestParam Long boxId ){
+        return new ResponseEntity<>(animalService.changeBox(id, boxId), HttpStatus.OK);
+    }
 }

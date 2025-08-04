@@ -46,4 +46,11 @@ public class AnimalService {
     public Long getNumberOfAnimals() {
         return animalRepository.count();
     }
+
+    public Animal changeBox(Long id, Long boxId) {
+        Animal animal = getAnimalById(id);
+        Box newBox = boxService.getBoxById(boxId);
+        animal.setBoxId(newBox);
+        return animalRepository.save(animal);
+    }
 }
