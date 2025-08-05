@@ -2,7 +2,9 @@ package com.gestion_refuge.refuge_animalier.services;
 
 import com.gestion_refuge.refuge_animalier.dtos.BoxAvaibilityResponseDTO;
 import com.gestion_refuge.refuge_animalier.dtos.BoxRequestDTO;
+import com.gestion_refuge.refuge_animalier.entities.Animal;
 import com.gestion_refuge.refuge_animalier.entities.Box;
+import com.gestion_refuge.refuge_animalier.repositories.AnimalRepository;
 import com.gestion_refuge.refuge_animalier.repositories.BoxRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -46,4 +48,5 @@ public class BoxService {
 
         return boxRepository.save(created);
     }
+
 }

@@ -2,6 +2,7 @@ package com.gestion_refuge.refuge_animalier.controllers;
 
 import com.gestion_refuge.refuge_animalier.dtos.AnimalRequestDTO;
 import com.gestion_refuge.refuge_animalier.entities.Animal;
+import com.gestion_refuge.refuge_animalier.entities.Box;
 import com.gestion_refuge.refuge_animalier.services.AnimalService;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -42,5 +43,10 @@ public class AnimalController {
     @PatchMapping("/{id}")
     public ResponseEntity<Animal> changeBox(@Valid @PathVariable Long id, @RequestParam Long boxId ){
         return new ResponseEntity<>(animalService.changeBox(id, boxId), HttpStatus.OK);
+    }
+
+    @GetMapping("/getbox/{animalId}")
+    public ResponseEntity<Box> getBoxByAnimalId(@PathVariable Long animalId){
+        return new ResponseEntity<>(animalService.getBoxByAnimalId(animalId), HttpStatus.OK);
     }
 }

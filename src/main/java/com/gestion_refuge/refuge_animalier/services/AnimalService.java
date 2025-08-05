@@ -53,4 +53,8 @@ public class AnimalService {
         animal.setBox(newBox);
         return animalRepository.save(animal);
     }
+
+    public Box getBoxByAnimalId(Long animalId) {
+        return this.getAnimalById(animalId).getBox();
+    }
 }
