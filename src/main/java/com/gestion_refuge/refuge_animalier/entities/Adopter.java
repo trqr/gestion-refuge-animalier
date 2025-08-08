@@ -15,6 +15,6 @@ public class Adopter {
     private String address;
     private String phone;
     private String email;
-    @OneToMany(mappedBy = "adopterId")
+    @OneToMany(mappedBy = "adopter")
     private List<Adoption> adoptions;
 }

@@ -54,3 +54,34 @@ INSERT INTO food (id, type, quantity, frequency, description, animal_id) VALUES
 (13, 'Croquettes', 600, '2 fois par jour', 'Alimentation énergie + pour chien sportif', 13),
 (14, 'Pâtée', 220, '1 fois par jour', 'Pâtée fine pour chat difficile', 14),
 (15, 'Croquettes', 500, '2 fois par jour', 'Croquettes hypoallergéniques', 15);
+
+INSERT INTO veterinarian (address, name, speciality) VALUES
+("45, rue Charles Edouard à 37000 Tours", "Dr Pichot Grégory", "anesthésie et analgésie"),
+("2, rue du Leclerc à 37230 St-Cyr-sur-Loire", "Dr Scridon Alexandru", "chirurgie"),
+("20, place du grand marché à 37000 Tours", "Dr Dhérouville Xavier", "dermatologie et nutrition");
+
+INSERT INTO health_care (animal_id, veterinarian_id, date, description, type) VALUES
+(1, 1, "2025-06-15", "Vaccination annuelle contre la rage et la leptospirose", "Vaccination"),
+(2, 3, "2025-07-03", "Traitement antiparasitaire externe et interne", "Traitement"),
+(3, 2, "2025-05-22", "Détartrage complet sous anesthésie", "Soins dentaires"),
+(5, 1, "2025-06-28", "Vérification post-adoption et rappel vaccins", "Consultation"),
+(6, 3, "2025-07-12", "Contrôle et traitement contre l'asthme", "Suivi médical"),
+(7, 2, "2025-05-30", "Suture de plaie suite à une coupure", "Chirurgie"),
+(10, 3, "2025-06-18", "Stérilisation et suivi post-opératoire", "Chirurgie"),
+(11, 1, "2025-07-02", "Traitement de l'arthrose par anti-inflammatoires", "Traitement"),
+(14, 3, "2025-07-05", "Examen complet après adoption", "Consultation"),
+(17, 3, "2025-06-14", "Nettoyage et traitement de l’otite chronique", "Traitement"),
+(19, 2, "2025-06-25", "Soins dermatologiques pour peau fragile", "Dermatologie"),
+(20, 1, "2025-06-29", "Contrôle ophtalmologique pour yeux irrités", "Consultation"),
+(22, 3, "2025-06-21", "Allergie cutanée : traitement antihistaminique", "Traitement"),
+(24, 1, "2025-07-01", "Bilan de santé complet et vaccins annuels", "Consultation"),
+(1, 1, "2025-09-15", "Rappel de vaccination contre la rage", "Vaccination"),
+(3, 2, "2025-08-20", "Contrôle du poids et bilan sanguin", "Consultation"),
+(5, 3, "2025-08-10", "Détartrage préventif", "Soins dentaires"),
+(7, 1, "2025-08-25", "Bilan annuel et test d’agilité", "Consultation"),
+(10, 3, "2025-09-10", "Contrôle post-stérilisation", "Chirurgie"),
+(14, 2, "2025-08-22", "Vérification de la vue", "Consultation"),
+(17, 3, "2025-09-18", "Nettoyage régulier de l’oreille gauche", "Traitement"),
+(19, 2, "2025-08-28", "Contrôle dermatologique", "Dermatologie"),
+(20, 1, "2025-09-05", "Contrôle des yeux et traitement anti-irritations", "Consultation"),
+(22, 3, "2025-09-12", "Injection antihistaminique", "Traitement");

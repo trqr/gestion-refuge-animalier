@@ -1,5 +1,7 @@
 package com.gestion_refuge.refuge_animalier.entities;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.*;
 import lombok.Data;
 
@@ -14,6 +16,7 @@ public class Veterinarian {
     private String name;
     private String speciality;
     private String address;
-    @OneToMany(mappedBy = "veterinarianId")
+    @OneToMany(mappedBy = "veterinarian")
+    @JsonBackReference
     private List<HealthCare> healthCares;
 }

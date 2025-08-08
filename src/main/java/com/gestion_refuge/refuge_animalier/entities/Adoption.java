@@ -14,7 +14,7 @@ public class Adoption {
     private String status;
     private LocalDate date;
     @ManyToOne
-    private Animal animalId;
+    private Animal animal;
     @ManyToOne
-    private Adopter adopterId;
+    private Adopter adopter;
 }
