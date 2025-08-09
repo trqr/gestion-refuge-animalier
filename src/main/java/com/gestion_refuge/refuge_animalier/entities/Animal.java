@@ -25,4 +25,5 @@ public class Animal {
     @ManyToOne
     @JsonBackReference
     private Box box;
+    private boolean isAdopted = false;
 }

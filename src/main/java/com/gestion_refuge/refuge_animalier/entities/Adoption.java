@@ -11,8 +11,8 @@ public class Adoption {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private String status;
-    private LocalDate date;
+    private String status = "terminé";
+    private LocalDate date = LocalDate.now();
     @ManyToOne
     private Animal animal;
     @ManyToOne
