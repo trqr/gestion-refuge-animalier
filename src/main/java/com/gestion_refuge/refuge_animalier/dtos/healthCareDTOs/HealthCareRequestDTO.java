@@ -13,7 +13,7 @@ import java.time.LocalDate;
 public class HealthCareRequestDTO {
     @NotBlank(message = "Le type de soin ne peut pas être vide.")
     private String type;
-    @NotBlank(message = "La date du soin ne peut pas être vide.")
+    @NotNull(message = "La date est obligatoire")
     private LocalDate date;
     @NotBlank(message = "La description du soin ne peut pas être vide.")
     @Length(min = 10, message = "La description doit avoir au moins 10 caractères.")

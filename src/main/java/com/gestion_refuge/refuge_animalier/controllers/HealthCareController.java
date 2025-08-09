@@ -3,6 +3,7 @@ package com.gestion_refuge.refuge_animalier.controllers;
 import com.gestion_refuge.refuge_animalier.dtos.healthCareDTOs.HealthCareRequestDTO;
 import com.gestion_refuge.refuge_animalier.entities.HealthCare;
 import com.gestion_refuge.refuge_animalier.services.HealthCareService;
+import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -33,7 +34,7 @@ public class HealthCareController {
     }
 
     @PostMapping
-    public ResponseEntity<HealthCare> addHealthCare(@RequestBody HealthCareRequestDTO request) {
+    public ResponseEntity<HealthCare> addHealthCare(@Valid @RequestBody HealthCareRequestDTO request) {
         return new ResponseEntity<>(healthCareService.addHealthCare(request), HttpStatus.CREATED);
     }
 }
