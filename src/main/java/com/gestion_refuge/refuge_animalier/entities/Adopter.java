@@ -1,5 +1,6 @@
 package com.gestion_refuge.refuge_animalier.entities;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import jakarta.persistence.*;
 import lombok.Data;
 
@@ -16,5 +17,6 @@ public class Adopter {
     private String phone;
     private String email;
     @OneToMany(mappedBy = "adopter")
+    @JsonBackReference
     private List<Adoption> adoptions;
 }
