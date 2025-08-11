@@ -38,4 +38,8 @@ public class AdoptionService {
 
         return adoptionRepository.save(created);
     }
+
+    public List<Adoption> getLast5() {
+        return adoptionRepository.findTop5ByDateBeforeOrderByDateDesc(LocalDate.now().plusDays(1));
+    }
 }

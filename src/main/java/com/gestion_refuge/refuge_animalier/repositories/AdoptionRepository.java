@@ -9,4 +9,7 @@ import java.util.List;
 public interface AdoptionRepository extends JpaRepository<Adoption, Long> {
 
     List<Adoption> findByDateAfterOrderByDateAsc(LocalDate date);
+
+    List<Adoption> findTop5ByDateBeforeOrderByDateDesc(LocalDate date);
+
 }

@@ -7,6 +7,7 @@ import com.gestion_refuge.refuge_animalier.services.AdopterService;
 import com.gestion_refuge.refuge_animalier.services.AdoptionService;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.autoconfigure.graphql.GraphQlProperties;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -38,5 +39,10 @@ public class AdoptionController {
         Adopter newAdopter = adopterService.saveAdopter(requestDTO);
 
         return new ResponseEntity<>(adoptionService.saveAdoption(newAdopter, requestDTO.getAnimalId()), HttpStatus.CREATED);
+    }
+
+    @GetMapping("/last-5")
+    public ResponseEntity<List<Adoption>> getLast5Adoptions(){
+        return new ResponseEntity<>(adoptionService.getLast5(), HttpStatus.OK);
     }
 }
