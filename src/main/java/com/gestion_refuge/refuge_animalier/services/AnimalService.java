@@ -3,6 +3,7 @@ package com.gestion_refuge.refuge_animalier.services;
 import com.gestion_refuge.refuge_animalier.dtos.AnimalRequestDTO;
 import com.gestion_refuge.refuge_animalier.entities.Animal;
 import com.gestion_refuge.refuge_animalier.entities.Box;
+import com.gestion_refuge.refuge_animalier.exceptions.BoxFullException;
 import com.gestion_refuge.refuge_animalier.repositories.AnimalRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -50,6 +51,9 @@ public class AnimalService {
     public Animal changeBox(Long id, Long boxId) {
         Animal animal = getAnimalById(id);
         Box newBox = boxService.getBoxById(boxId);
+        if (newBox.getCapacity() - newBox.getAnimals().size() <= 0){
+            throw new BoxFullException("Le box est plein");
+        }
         animal.setBox(newBox);
         return animalRepository.save(animal);
     }

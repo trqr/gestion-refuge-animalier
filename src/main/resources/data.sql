@@ -23,7 +23,7 @@ INSERT INTO animal (id, name, type, race, sex, birth_date, arrival_date, behavio
 (7, 'Max', 'Chien', 'Border Collie', 'M', '2016-08-09', '2025-05-30', 'Hyperactif', 'Bon', 'https://images.unsplash.com/photo-1601758123927-1969082b3b26', 5, 0),
 (8, 'Chloé', 'Chat', 'Chartreux', 'F', '2019-12-11', '2025-06-25', 'Paisible', 'Bon', 'https://images.unsplash.com/photo-1574158622682-e40e69881006', 11, 0),
 (9, 'Milo', 'Chien', 'Shiba Inu', 'M', '2021-04-01', '2025-06-05', 'Indépendant', 'Bon', 'https://images.unsplash.com/photo-1601758003122-58e5fca11dd1', 6, 0),
-(10, 'Bella', 'Chat', 'Bengal', 'F', '2020-03-22', '2025-06-10', 'Joueuse', 'Bon', 'https://images.unsplash.com/photo-1592194996308-7b43878e84a6', 6, 0),
+(10, 'Bella', 'Chat', 'Bengal', 'F', '2020-03-22', '2025-06-10', 'Joueuse', 'Bon', 'https://images.unsplash.com/photo-1592194996308-7b43878e84a6', 11, 0),
 (11, 'Rocky', 'Chien', 'Rottweiler', 'M', '2015-07-14', '2025-07-02', 'Protecteur', 'Arthrose', 'https://images.unsplash.com/photo-1596495577886-d920f1fb7238', 7, 0),
 (12, 'Lily', 'Chat', 'Abyssin', 'F', '2021-10-05', '2025-06-30', 'Vive', 'Bon', 'https://images.unsplash.com/photo-1543852786-1cf6624b9987', 7, 0),
 (13, 'Diesel', 'Chien', 'Dobermann', 'M', '2018-09-18', '2025-06-11', 'Calme', 'Bon', 'https://images.unsplash.com/photo-1619982699969-4bcb39c5b371', 7, 0),
@@ -36,9 +36,15 @@ INSERT INTO animal (id, name, type, race, sex, birth_date, arrival_date, behavio
 (20, 'Jazz', 'Chien', 'Husky', 'M', '2017-12-25', '2025-06-28', 'Très énergique', 'Yeux irrités', 'https://images.unsplash.com/photo-1574158622682-e40e69881006', 4, 0),
 (21, 'Nemo', 'Chat', 'Devon Rex', 'M', '2021-06-30', '2025-07-01', 'Joueur', 'Bon', 'https://images.unsplash.com/photo-1600843381414-47c2b9fce7b5', null, 1),
 (22, 'Ruby', 'Chien', 'Staffie', 'F', '2018-02-10', '2025-06-17', 'Fidèle', 'Allergie cutanée', 'https://images.unsplash.com/photo-1583337130417-3346a1be7dee', 2, 0),
-(23, 'Canelle', 'Chat', 'Angora Turc', 'F', '2022-09-11', '2025-07-04', 'Douce', 'Bon', 'https://images.unsplash.com/photo-1574158622682-e40e69881006', 2, 0),
+(23, 'Canelle', 'Chat', 'Angora Turc', 'F', '2022-09-11', '2025-07-04', 'Douce', 'Bon', 'https://images.unsplash.com/photo-1574158622682-e40e69881006', 11, 0),
 (24, 'Thor', 'Chien', 'Akita Inu', 'M', '2016-06-22', '2025-06-21', 'Calme', 'Bon', 'https://images.unsplash.com/photo-1561037404-61cd46aa6152', 8, 0),
-(25, 'Olympe', 'Chat', 'British Shorthair', 'F', '2020-02-29', '2025-06-30', 'Indépendante', 'Bon', 'https://images.unsplash.com/photo-1583337130417-3346a1be7dee', 1, 0);
+(25, 'Olympe', 'Chat', 'British Shorthair', 'F', '2020-02-29', '2025-06-30', 'Indépendante', 'Bon', 'https://images.unsplash.com/photo-1583337130417-3346a1be7dee', 11, 0),
+(26, 'Bobby', 'Chien', 'Cocker Spaniel', 'M', '2019-05-14', '2025-06-01', 'Joueur', 'Bon', 'https://images.unsplash.com/photo-1507149833265-60c372daea22', null, 1),
+(27, 'Simba', 'Chat', 'Bengal', 'M', '2021-08-02', '2025-06-12', 'Curieux', 'Bon', 'https://images.unsplash.com/photo-1592194996308-7b43878e84a6', null, 1),
+(28, 'Daisy', 'Chien', 'Bouledogue Français', 'F', '2020-04-25', '2025-06-18', 'Affectueuse', 'Bon', 'https://images.unsplash.com/photo-1560807707-8cc77767d783', null, 1),
+(29, 'Cleo', 'Chat', 'Siamois', 'F', '2018-07-11', '2025-06-20', 'Calme', 'Bon', 'https://images.unsplash.com/photo-1592194996308-7b43878e84a6', null, 1),
+(30, 'Lucky', 'Chien', 'Jack Russell', 'M', '2022-02-05', '2025-07-05', 'Énergique', 'Bon', 'https://images.unsplash.com/photo-1548199973-03cce0bbc87b', null, 1);
+
 
 INSERT INTO food (id, type, quantity, frequency, description, animal_id) VALUES
 (1, 'Croquettes', 500, '2 fois par jour', 'Croquettes premium pour chien adulte', 1),
@@ -55,7 +61,12 @@ INSERT INTO food (id, type, quantity, frequency, description, animal_id) VALUES
 (12, 'Croquettes', 370, '2 fois par jour', 'Croquettes digestes pour chats', 12),
 (13, 'Croquettes', 600, '2 fois par jour', 'Alimentation énergie + pour chien sportif', 13),
 (14, 'Pâtée', 220, '1 fois par jour', 'Pâtée fine pour chat difficile', 14),
-(15, 'Croquettes', 500, '2 fois par jour', 'Croquettes hypoallergéniques', 15);
+(15, 'Croquettes', 500, '2 fois par jour', 'Croquettes hypoallergéniques', 15),
+(16, 'Croquettes', 400, '2 fois par jour', 'Croquettes pour chien actif', 26),
+(17, 'Pâtée', 200, '1 fois par jour', 'Pâtée au thon pour chat', 27),
+(18, 'Croquettes', 450, '2 fois par jour', 'Croquettes pour petit chien', 28),
+(19, 'Croquettes', 350, '2 fois par jour', 'Croquettes pour chat stérilisé', 29),
+(20, 'Croquettes', 300, '3 fois par jour', 'Croquettes pour chiot plein d’énergie', 30);
 
 INSERT INTO veterinarian (address, name, speciality) VALUES
 ("45, rue Charles Edouard à 37000 Tours", "Dr Pichot G", "anesthésie et analgésie"),
@@ -91,9 +102,19 @@ INSERT INTO health_care (animal_id, veterinarian_id, date, description, type) VA
 INSERT INTO adopter (address, email, name, phone) VALUES
 ("40, rue jean reno 37390 CHANCEAU",  "jean@reno.com", "Jean Reno", "0603040506"),
 ("22, rue Jean Luc 37390 CHARENTILLY",  "jean@luc.com", "Jean Luc", "0603040706"),
-("3, rue Jean Robert 37390 CAMEMBERT",  "jean@robert.com", "Jean Robert", "0603040516");
+("3, rue Jean Robert 37390 CAMEMBERT",  "jean@robert.com", "Jean Robert", "0603040516"),
+("12, rue des Lilas 75012 Paris", "marie.dupont@example.com", "Marie Dupont", "0611223344"),
+("5, avenue Victor Hugo 69006 Lyon", "paul.martin@example.com", "Paul Martin", "0622334455"),
+("18, rue de la Paix 31000 Toulouse", "julie.lefevre@example.com", "Julie Lefèvre", "0633445566"),
+("27, boulevard Haussmann 75009 Paris", "antoine.durand@example.com", "Antoine Durand", "0644556677"),
+("3, chemin des Oliviers 06000 Nice", "sophie.lambert@example.com", "Sophie Lambert", "0655667788");
 
 INSERT INTO adoption (adopter_id, animal_id, status, date) VALUES
 (1,1, "terminé", "2025-08-09"),
 (2,4,"terminé", "2025-08-01"),
-(3,21,"terminé", "2025-08-08");
+(3,21,"terminé", "2025-08-08"),
+(4, 26, "terminé", "2025-08-10"),
+(5, 27, "terminé", "2025-06-11"),
+(6, 28, "terminé", "2025-06-09"),
+(7, 29, "terminé", "2025-07-12"),
+(8, 30, "terminé", "2025-08-12");
