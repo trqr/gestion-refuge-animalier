@@ -12,4 +12,6 @@ public interface HealthCareRepository extends JpaRepository<HealthCare, Long> {
 
     List<HealthCare> findByAnimalIdOrderByDateAsc(Long animalId);
 
+    HealthCare findTop1ByAnimalIdAndDateAfter(Long animalId, LocalDate date);
+
 }

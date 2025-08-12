@@ -44,4 +44,8 @@ public class HealthCareService {
 
         return healthCareRepository.save(created);
     }
+
+    public HealthCare getNextAnimalHealthCare(Long animalId) {
+        return healthCareRepository.findTop1ByAnimalIdAndDateAfter(animalId, LocalDate.now());
+    }
 }

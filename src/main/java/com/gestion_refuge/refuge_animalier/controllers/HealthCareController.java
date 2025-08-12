@@ -24,13 +24,18 @@ public class HealthCareController {
     }
 
     @GetMapping("/next")
-    public List<HealthCare> getNextFive() {
-        return healthCareService.getNextFiveHealthCares();
+    public ResponseEntity<List<HealthCare>> getNextFive() {
+        return new ResponseEntity<>(healthCareService.getNextFiveHealthCares(), HttpStatus.OK);
     }
 
     @GetMapping("/animal/{animalId}")
-    public List<HealthCare> getHealthCaresForAnimal(@PathVariable Long animalId) {
-        return healthCareService.getHealthCaresByAnimal(animalId);
+    public ResponseEntity<List<HealthCare>> getHealthCaresForAnimal(@PathVariable Long animalId) {
+        return new ResponseEntity<>(healthCareService.getHealthCaresByAnimal(animalId), HttpStatus.OK);
+    }
+
+    @GetMapping("/next/animal/{animalId}")
+    public ResponseEntity<HealthCare> getNextHealthCareForAnimal(@PathVariable Long animalId) {
+        return new ResponseEntity<>(healthCareService.getNextAnimalHealthCare(animalId), HttpStatus.OK);
     }
 
     @PostMapping
