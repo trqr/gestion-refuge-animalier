@@ -14,11 +14,11 @@ INSERT INTO box (id, name, type, capacity, address) VALUES
 
 
 INSERT INTO animal (id, name, type, race, sex, birth_date, arrival_date, behaviour, health, picture, box_id, is_adopted) VALUES
-(1, 'Rex', 'Chien', 'Berger Allemand', 'M', '2018-04-12', '2025-06-01', 'Protecteur', 'Bon', 'https://images.unsplash.com/photo-1619983081563-d5ef2de763b7', null, 1),
-(2, 'Mia', 'Chat', 'Siamois', 'F', '2020-08-20', '2025-06-15', 'Calme', 'Allergie légère', 'https://images.unsplash.com/photo-1592194996308-7b43878e84a6', 2, 0),
+(1, 'Rex', 'Chien', 'Berger Allemand', 'M', '2018-04-12', '2025-05-01', 'Protecteur', 'Bon', 'https://images.unsplash.com/photo-1619983081563-d5ef2de763b7', null, 1),
+(2, 'Mia', 'Chat', 'Siamois', 'F', '2020-08-20', '2025-04-15', 'Calme', 'Allergie légère', 'https://images.unsplash.com/photo-1592194996308-7b43878e84a6', 2, 0),
 (3, 'Oscar', 'Chien', 'Labrador', 'M', '2017-11-05', '2025-05-10', 'Joueur', 'Surpoids', 'https://images.unsplash.com/photo-1560743641-3914f2c45636', 2, 0),
-(4, 'Nala', 'Chat', 'Maine Coon', 'F', '2021-02-14', '2025-07-01', 'Curieuse', 'Bon', 'https://images.unsplash.com/photo-1592194996308-7b43878e84a6', null, 1),
-(5, 'Toby', 'Chien', 'Golden Retriever', 'M', '2019-06-23', '2025-06-20', 'Affectueux', 'Bon', 'https://images.unsplash.com/photo-1558788353-f76d92427f16', 4, 0),
+(4, 'Nala', 'Chat', 'Maine Coon', 'F', '2021-02-14', '2025-03-01', 'Curieuse', 'Bon', 'https://images.unsplash.com/photo-1592194996308-7b43878e84a6', null, 1),
+(5, 'Toby', 'Chien', 'Golden Retriever', 'M', '2019-03-23', '2025-06-20', 'Affectueux', 'Bon', 'https://images.unsplash.com/photo-1558788353-f76d92427f16', 4, 0),
 (6, 'Luna', 'Chat', 'Persan', 'F', '2022-01-12', '2025-07-15', 'Discrète', 'Asthme léger', 'https://images.unsplash.com/photo-1555685812-4b943f1cb0eb', 4, 0),
 (7, 'Max', 'Chien', 'Border Collie', 'M', '2016-08-09', '2025-05-30', 'Hyperactif', 'Bon', 'https://images.unsplash.com/photo-1601758123927-1969082b3b26', 5, 0),
 (8, 'Chloé', 'Chat', 'Chartreux', 'F', '2019-12-11', '2025-06-25', 'Paisible', 'Bon', 'https://images.unsplash.com/photo-1574158622682-e40e69881006', 11, 0),
@@ -27,23 +27,29 @@ INSERT INTO animal (id, name, type, race, sex, birth_date, arrival_date, behavio
 (11, 'Rocky', 'Chien', 'Rottweiler', 'M', '2015-07-14', '2025-07-02', 'Protecteur', 'Arthrose', 'https://images.unsplash.com/photo-1596495577886-d920f1fb7238', 7, 0),
 (12, 'Lily', 'Chat', 'Abyssin', 'F', '2021-10-05', '2025-06-30', 'Vive', 'Bon', 'https://images.unsplash.com/photo-1543852786-1cf6624b9987', 7, 0),
 (13, 'Diesel', 'Chien', 'Dobermann', 'M', '2018-09-18', '2025-06-11', 'Calme', 'Bon', 'https://images.unsplash.com/photo-1619982699969-4bcb39c5b371', 7, 0),
-(14, 'Sacha', 'Chat', 'Norvégien', 'F', '2022-05-12', '2025-07-03', 'Curieuse', 'Bon', 'https://images.unsplash.com/photo-1518791841217-8f162f1e1131?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8Y2hhdHN8ZW58MHx8MHx8fDA%3D', 11, 0),
-(15, 'Zeus', 'Chien', 'Malinois', 'M', '2020-11-01', '2025-07-08', 'Sportif', 'Bon', 'https://images.unsplash.com/photo-1583511655789-8c3e1c02d57f', 9, 0),
+(14, 'Sacha', 'Chat', 'Norvégien', 'F', '2022-05-12', '2025-03-03', 'Curieuse', 'Bon', 'https://images.unsplash.com/photo-1518791841217-8f162f1e1131?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8Y2hhdHN8ZW58MHx8MHx8fDA%3D', 11, 0),
+(15, 'Zeus', 'Chien', 'Malinois', 'M', '2020-11-01', '2025-02-08', 'Sportif', 'Bon', 'https://images.unsplash.com/photo-1583511655789-8c3e1c02d57f', 9, 0),
 (16, 'Nino', 'Chat', 'Ragdoll', 'M', '2021-08-10', '2025-06-18', 'Affectueux', 'Bon', 'https://images.unsplash.com/photo-1610986603163-5ec24f4e1db9', 9, 0),
 (17, 'Flamme', 'Chien', 'Beagle', 'F', '2016-03-09', '2025-06-09', 'Sociable', 'Otite chronique', 'https://images.unsplash.com/photo-1568572933382-74d440642117', 9, 0),
-(18, 'Igor', 'Chien', 'Cane Corso', 'M', '2019-01-20', '2025-07-05', 'Docile', 'Bon', 'https://images.unsplash.com/photo-1587486913044-d6389c565b1f', 6, 0),
-(19, 'Gipsy', 'Chat', 'Sphynx', 'F', '2020-09-01', '2025-06-12', 'Pot-de-colle', 'Peau fragile', 'https://images.unsplash.com/photo-1574158622682-e40e69881006', 6, 0),
-(20, 'Jazz', 'Chien', 'Husky', 'M', '2017-12-25', '2025-06-28', 'Très énergique', 'Yeux irrités', 'https://images.unsplash.com/photo-1574158622682-e40e69881006', 4, 0),
+(18, 'Igor', 'Chien', 'Cane Corso', 'M', '2019-01-20', '2025-02-05', 'Docile', 'Bon', 'https://images.unsplash.com/photo-1587486913044-d6389c565b1f', 6, 0),
+(19, 'Gipsy', 'Chat', 'Sphynx', 'F', '2020-09-01', '2025-01-12', 'Pot-de-colle', 'Peau fragile', 'https://images.unsplash.com/photo-1574158622682-e40e69881006', 6, 0),
+(20, 'Jazz', 'Chien', 'Husky', 'M', '2017-12-25', '2025-01-28', 'Très énergique', 'Yeux irrités', 'https://images.unsplash.com/photo-1574158622682-e40e69881006', 4, 0),
 (21, 'Nemo', 'Chat', 'Devon Rex', 'M', '2021-06-30', '2025-07-01', 'Joueur', 'Bon', 'https://images.unsplash.com/photo-1600843381414-47c2b9fce7b5', null, 1),
 (22, 'Ruby', 'Chien', 'Staffie', 'F', '2018-02-10', '2025-06-17', 'Fidèle', 'Allergie cutanée', 'https://images.unsplash.com/photo-1583337130417-3346a1be7dee', 2, 0),
 (23, 'Canelle', 'Chat', 'Angora Turc', 'F', '2022-09-11', '2025-07-04', 'Douce', 'Bon', 'https://images.unsplash.com/photo-1574158622682-e40e69881006', 11, 0),
-(24, 'Thor', 'Chien', 'Akita Inu', 'M', '2016-06-22', '2025-06-21', 'Calme', 'Bon', 'https://images.unsplash.com/photo-1561037404-61cd46aa6152', 8, 0),
+(24, 'Thor', 'Chien', 'Akita Inu', 'M', '2016-06-22', '2025-01-21', 'Calme', 'Bon', 'https://images.unsplash.com/photo-1561037404-61cd46aa6152', 8, 0),
 (25, 'Olympe', 'Chat', 'British Shorthair', 'F', '2020-02-29', '2025-06-30', 'Indépendante', 'Bon', 'https://images.unsplash.com/photo-1583337130417-3346a1be7dee', 11, 0),
-(26, 'Bobby', 'Chien', 'Cocker Spaniel', 'M', '2019-05-14', '2025-06-01', 'Joueur', 'Bon', 'https://images.unsplash.com/photo-1507149833265-60c372daea22', null, 1),
-(27, 'Simba', 'Chat', 'Bengal', 'M', '2021-08-02', '2025-06-12', 'Curieux', 'Bon', 'https://images.unsplash.com/photo-1592194996308-7b43878e84a6', null, 1),
+(26, 'Bobby', 'Chien', 'Cocker Spaniel', 'M', '2019-05-14', '2025-02-01', 'Joueur', 'Bon', 'https://images.unsplash.com/photo-1507149833265-60c372daea22', null, 1),
+(27, 'Simba', 'Chat', 'Bengal', 'M', '2021-08-02', '2025-03-12', 'Curieux', 'Bon', 'https://images.unsplash.com/photo-1592194996308-7b43878e84a6', null, 1),
 (28, 'Daisy', 'Chien', 'Bouledogue Français', 'F', '2020-04-25', '2025-06-18', 'Affectueuse', 'Bon', 'https://images.unsplash.com/photo-1560807707-8cc77767d783', null, 1),
-(29, 'Cleo', 'Chat', 'Siamois', 'F', '2018-07-11', '2025-06-20', 'Calme', 'Bon', 'https://images.unsplash.com/photo-1592194996308-7b43878e84a6', null, 1),
-(30, 'Lucky', 'Chien', 'Jack Russell', 'M', '2022-02-05', '2025-07-05', 'Énergique', 'Bon', 'https://images.unsplash.com/photo-1548199973-03cce0bbc87b', null, 1);
+(29, 'Cleo', 'Chat', 'Siamois', 'F', '2018-07-11', '2025-02-20', 'Calme', 'Bon', 'https://images.unsplash.com/photo-1592194996308-7b43878e84a6', null, 1),
+(30, 'Lucky', 'Chien', 'Jack Russell', 'M', '2022-02-05', '2025-07-05', 'Énergique', 'Bon', 'https://images.unsplash.com/photo-1548199973-03cce0bbc87b', null, 1),
+(31, 'Shadow', 'Chien', 'Berger Australien', 'M', '2020-09-12', '2025-05-08', 'Joueur', 'Bon', 'https://images.unsplash.com/photo-1517849845537-4d257902454a', null, 1),
+(32, 'Perle', 'Chat', 'Ragdoll', 'F', '2021-11-04', '2025-05-20', 'Affectueuse', 'Bon', 'https://images.unsplash.com/photo-1595433707802-6e1e7e3b7b88', null, 1),
+(33, 'Tango', 'Chien', 'Dalmatien', 'M', '2019-02-14', '2025-08-03', 'Énergique', 'Bon', 'https://images.unsplash.com/photo-1518717758536-85ae29035b6d', null, 1),
+(34, 'Saphir', 'Chat', 'Siamois', 'M', '2020-03-21', '2025-02-14', 'Calme', 'Bon', 'https://images.unsplash.com/photo-1592194996308-7b43878e84a6', null, 1),
+(35, 'Nikita', 'Chien', 'Husky', 'F', '2022-07-09', '2025-07-02', 'Vive', 'Bon', 'https://images.unsplash.com/photo-1574158622682-e40e69881006', null, 1),
+(36, 'Grisou', 'Chat', 'Chartreux', 'M', '2021-10-29', '2025-07-12', 'Paisible', 'Bon', 'https://images.unsplash.com/photo-1574158622682-e40e69881006', null, 1);
 
 
 INSERT INTO food (id, type, quantity, frequency, description, animal_id) VALUES
@@ -107,7 +113,13 @@ INSERT INTO adopter (address, email, name, phone) VALUES
 ("5, avenue Victor Hugo 69006 Lyon", "paul.martin@example.com", "Paul Martin", "0622334455"),
 ("18, rue de la Paix 31000 Toulouse", "julie.lefevre@example.com", "Julie Lefèvre", "0633445566"),
 ("27, boulevard Haussmann 75009 Paris", "antoine.durand@example.com", "Antoine Durand", "0644556677"),
-("3, chemin des Oliviers 06000 Nice", "sophie.lambert@example.com", "Sophie Lambert", "0655667788");
+("3, chemin des Oliviers 06000 Nice", "sophie.lambert@example.com", "Sophie Lambert", "0655667788"),
+("10, rue des Fleurs 44000 Nantes", "emma.moreau@example.com", "Emma Moreau", "0611223345"),
+("25, avenue des Champs 75008 Paris", "lucas.bernard@example.com", "Lucas Bernard", "0622334456"),
+("8, impasse des Lilas 31000 Toulouse", "claire.dubois@example.com", "Claire Dubois", "0633445567"),
+("14, rue Victor Hugo 69002 Lyon", "julien.perrin@example.com", "Julien Perrin", "0644556678"),
+("5, chemin des Acacias 67000 Strasbourg", "lea.giraud@example.com", "Léa Giraud", "0655667789"),
+("17, place Bellecour 69002 Lyon", "maxime.fontaine@example.com", "Maxime Fontaine", "0666778899");
 
 INSERT INTO adoption (adopter_id, animal_id, status, date) VALUES
 (1,1, "terminé", "2025-08-09"),
@@ -117,4 +129,10 @@ INSERT INTO adoption (adopter_id, animal_id, status, date) VALUES
 (5, 27, "terminé", "2025-06-11"),
 (6, 28, "terminé", "2025-06-09"),
 (7, 29, "terminé", "2025-07-12"),
-(8, 30, "terminé", "2025-08-12");
+(8, 30, "terminé", "2025-08-12"),
+(9, 31, "terminé", "2025-05-18"),
+(10, 32, "terminé", "2025-05-28"),
+(11, 33, "terminé", "2025-06-10"),
+(12, 34, "terminé", "2025-06-25"),
+(13, 35, "terminé", "2025-07-15"),
+(14, 36, "terminé", "2025-07-28");
