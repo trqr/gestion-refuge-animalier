@@ -45,7 +45,7 @@ public class AnimalService {
     }
 
     public Long getNumberOfAnimals() {
-        return animalRepository.count();
+        return animalRepository.countByIsAdopted(false);
     }
 
     public Animal changeBox(Long id, Long boxId) {

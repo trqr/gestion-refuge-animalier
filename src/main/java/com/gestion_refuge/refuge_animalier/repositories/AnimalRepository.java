@@ -10,4 +10,6 @@ public interface AnimalRepository extends JpaRepository<Animal, Long> {
     @Query("SELECT MONTH(a.arrivalDate) AS month, COUNT(a) AS count " +
             "FROM Animal a GROUP BY MONTH(a.arrivalDate)")
     List<Object[]> countArrivalsByMonth();
+
+    Long countByIsAdopted(boolean isAdopted);
 }
