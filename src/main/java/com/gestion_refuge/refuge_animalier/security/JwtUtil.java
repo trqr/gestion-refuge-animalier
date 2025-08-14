@@ -12,24 +12,19 @@ public class JwtUtil {
     private static final String SECRET = "admin";
     private static final Algorithm ALGORITHM = Algorithm.HMAC256(SECRET);
 
-    public String generateToken(String email, String role) {
+    public String generateToken(String email) {
         return JWT.create()
                 .withSubject(email)
-                .withClaim("role", role)
                 .withIssuedAt(new Date())
                 .withExpiresAt(new Date(System.currentTimeMillis() + 1000 * 1400 * 30))
                 .sign(ALGORITHM);
     }
 
-    public String extractUsername(String token) {
+    public String extractEmail(String token) {
         DecodedJWT decodedJWT = JWT.require(ALGORITHM).build().verify(token);
         return decodedJWT.getSubject();
     }
 
-    public String extractRole(String token) {
-        DecodedJWT decodedJWT = JWT.require(ALGORITHM).build().verify(token);
-        return decodedJWT.getClaim("role").asString();
-    }
 
     public boolean validateToken(String token, String username) {
         try {

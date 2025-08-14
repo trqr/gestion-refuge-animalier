@@ -32,21 +32,13 @@ public class JwtAuthFilter extends OncePerRequestFilter {
         if (authHeader != null && authHeader.startsWith("Bearer ")) {
             String token = authHeader.substring(7);
 
-            String username = jwtUtil.extractUsername(token);
-            String role = jwtUtil.extractRole(token);
+            String username = jwtUtil.extractEmail(token);
 
-            List<GrantedAuthority> authorities =
-                    List.of(new SimpleGrantedAuthority("ROLE_" + role));
-
-            // Crée un objet d’authentification avec l’utilisateur et ses rôles
             UsernamePasswordAuthenticationToken auth =
-                    new UsernamePasswordAuthenticationToken(username, null, authorities);
+                    new UsernamePasswordAuthenticationToken(username, null, List.of());
 
-            // Enregistre cette authentification dans le contexte de sécurité
             SecurityContextHolder.getContext().setAuthentication(auth);
         }
-
-        // Poursuit le traitement de la requête
         filterChain.doFilter(request, response);
     }
 }

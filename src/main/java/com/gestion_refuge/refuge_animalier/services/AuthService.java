@@ -7,7 +7,7 @@ import com.gestion_refuge.refuge_animalier.dtos.authDTOs.UserDTO;
 import com.gestion_refuge.refuge_animalier.entities.User;
 import com.gestion_refuge.refuge_animalier.mappers.UserMapper;
 import com.gestion_refuge.refuge_animalier.repositories.UserRepository;
-import jakarta.validation.Valid;
+import com.gestion_refuge.refuge_animalier.security.JwtUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
@@ -24,6 +24,9 @@ public class AuthService {
     @Autowired
     private PasswordEncoder passwordEncoder;
 
+    @Autowired
+    private JwtUtil jwtUtil;
+
     public UserDTO register(RegisterRequestDTO request) {
         if (userRepository.existsByEmail(request.getEmail())){
             throw new RuntimeException("Email already exists");
@@ -32,10 +35,19 @@ public class AuthService {
         request.setPassword(passwordEncoder.encode(request.getPassword()));
         User created = userRepository.save(userMapper.registerRequestToUser(request));
 
-        return userMapper.registerUserToResponse(created);
+        return userMapper.userToResponse(created);
     }
 
     public LoginResponseDTO login(LoginRequestDTO request) {
-        return new LoginResponseDTO(null, null);
+        User user = userRepository.findByEmail(request.getEmail())
+                .orElseThrow( () -> new RuntimeException("Email or password incorrect"));
+
+        if (passwordEncoder.matches(request.getPassword(), user.getPassword())){
+            String token = jwtUtil.generateToken(user.getEmail());
+            UserDTO userResponse = userMapper.userToResponse(user);
+            return new LoginResponseDTO(token, userResponse);
+        } else {
+            throw new RuntimeException("Email or password incorrect");
+        }
     }
 }

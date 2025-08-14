@@ -16,8 +16,8 @@ public class UserMapper {
         return created;
     }
 
-    public UserDTO registerUserToResponse(User user){
-        UserDTO responseDTO = new UserDTO(user.getUsername(), user.getEmail());
+    public UserDTO userToResponse(User user){
+        UserDTO responseDTO = new UserDTO(user.getId(), user.getUsername(), user.getEmail());
         return responseDTO;
     }
 }
