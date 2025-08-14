@@ -136,3 +136,6 @@ INSERT INTO adoption (adopter_id, animal_id, status, date) VALUES
 (12, 34, "terminé", "2025-06-25"),
 (13, 35, "terminé", "2025-07-15"),
 (14, 36, "terminé", "2025-07-28");
+
+INSERT INTO user (id, email, password, username) VALUES
+(1, "superadmin@superadmin.com", "$2a$10$WogmPSgYeZsrHIBg4bjfVufLkwsYofQTkmVHoAfTFM3pKkDV1tOoy", "SuperAdmin");
