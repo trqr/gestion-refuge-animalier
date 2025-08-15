@@ -1,6 +1,6 @@
 package com.gestion_refuge.refuge_animalier.services;
 
-import com.gestion_refuge.refuge_animalier.dtos.AdoptionRequestDTO;
+import com.gestion_refuge.refuge_animalier.dtos.adoptionDTOs.AdoptionRequestDTO;
 import com.gestion_refuge.refuge_animalier.entities.Adopter;
 import com.gestion_refuge.refuge_animalier.repositories.AdopterRepository;
 import org.springframework.beans.factory.annotation.Autowired;

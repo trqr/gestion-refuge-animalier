@@ -4,6 +4,7 @@ import com.gestion_refuge.refuge_animalier.entities.Adopter;
 import com.gestion_refuge.refuge_animalier.entities.Adoption;
 import com.gestion_refuge.refuge_animalier.entities.Animal;
 import com.gestion_refuge.refuge_animalier.repositories.AdoptionRepository;
+import com.gestion_refuge.refuge_animalier.repositories.AnimalRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -17,6 +18,8 @@ public class AdoptionService {
     private AdoptionRepository adoptionRepository;
     @Autowired
     private AnimalService animalService;
+    @Autowired
+    private AnimalRepository animalRepo;
 
     public List<Adoption> getAllAdoptions() {
         return adoptionRepository.findAll();
@@ -39,7 +42,31 @@ public class AdoptionService {
         return adoptionRepository.save(created);
     }
 
+    public List<Adoption> validateAdoptions(List<Long> adoptionIds) {
+        List<Adoption> adoptions = adoptionRepository.findAllById(adoptionIds);
+
+        for (Adoption adoption : adoptions) {
+            adoption.setStatus("terminé");
+            Animal animal = adoption.getAnimal();
+            animal.setBox(null);
+            animalRepo.save(animal);
+        }
+        return adoptionRepository.saveAll(adoptions);
+    }
+
     public List<Adoption> getLast5() {
         return adoptionRepository.findTop5ByDateBeforeOrderByDateDesc(LocalDate.now().plusDays(1));
+    }
+
+    public List<Adoption> cancelAdoptions(List<Long> adoptionIds) {
+        List<Adoption> adoptions = adoptionRepository.findAllById(adoptionIds);
+
+        for (Adoption adoption : adoptions) {
+            if (adoption.getStatus().equals("terminé")){
+                throw new RuntimeException("Ne peut pas être annulé car l'adoption id : " + adoption.getId() + " déja validé");
+            }
+            adoption.setStatus("annulé");
+        }
+        return adoptionRepository.saveAll(adoptions);
     }
 }

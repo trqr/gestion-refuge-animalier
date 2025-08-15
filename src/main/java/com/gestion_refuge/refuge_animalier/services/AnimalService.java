@@ -61,4 +61,8 @@ public class AnimalService {
     public Box getBoxByAnimalId(Long animalId) {
         return this.getAnimalById(animalId).getBox();
     }
+
+    public List<Animal> getNotAdoptedAnimals() {
+        return animalRepository.findByIsAdopted(false);
+    }
 }

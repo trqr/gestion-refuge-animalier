@@ -12,4 +12,6 @@ public interface AnimalRepository extends JpaRepository<Animal, Long> {
     List<Object[]> countArrivalsByMonth();
 
     Long countByIsAdopted(boolean isAdopted);
+
+    List<Animal> findByIsAdopted(boolean isAdopted);
 }

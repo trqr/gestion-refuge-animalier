@@ -25,6 +25,11 @@ public class AnimalController {
         return new ResponseEntity<>(animalService.getAllAnimals(), HttpStatus.OK);
     }
 
+    @GetMapping("/not-adopted")
+    public ResponseEntity<List<Animal>> getNotAdoptedAnimals(){
+        return new ResponseEntity<>(animalService.getNotAdoptedAnimals(), HttpStatus.OK);
+    }
+
     @GetMapping("/total")
     public ResponseEntity<Long> getNumberOfAnimals(){
         return new ResponseEntity<>(animalService.getNumberOfAnimals(), HttpStatus.OK);
