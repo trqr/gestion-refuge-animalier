@@ -49,4 +49,14 @@ public class BoxService {
         return boxRepository.save(created);
     }
 
+    public String deleteBox(Long boxId) {
+        Box box = getBoxById(boxId);
+        if (!box.getAnimals().isEmpty()){
+            throw new RuntimeException("Box " + boxId + " ne peut pas être supprimé car il contient des animaux");
+        } else {
+            boxRepository.delete(box);
+            return "Box " + boxId + " supprimé";
+        }
+
+    }
 }

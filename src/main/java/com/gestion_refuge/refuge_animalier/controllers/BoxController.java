@@ -48,4 +48,9 @@ public class BoxController {
     public ResponseEntity<Box> createBox(@Valid @RequestBody BoxRequestDTO request){
         return new ResponseEntity<>(boxService.createBox(request), HttpStatus.CREATED);
     }
+
+    @DeleteMapping("/{boxId}")
+    public ResponseEntity<String> deleteBox(@PathVariable Long boxId){
+        return new ResponseEntity<>(boxService.deleteBox(boxId), HttpStatus.NO_CONTENT);
+    }
 }
