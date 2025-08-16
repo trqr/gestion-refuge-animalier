@@ -48,4 +48,9 @@ public class HealthCareService {
     public HealthCare getNextAnimalHealthCare(Long animalId) {
         return healthCareRepository.findTop1ByAnimalIdAndDateAfter(animalId, LocalDate.now());
     }
+
+    public HealthCare getHealthCareById(Long healthCareId) {
+        return healthCareRepository.findById(healthCareId)
+                .orElseThrow(() -> new RuntimeException("Le soin id " + healthCareId + " non trouvée"));
+    }
 }

@@ -28,6 +28,11 @@ public class HealthCareController {
         return new ResponseEntity<>(healthCareService.getNextFiveHealthCares(), HttpStatus.OK);
     }
 
+    @GetMapping("/{healthCareId}")
+    public ResponseEntity<HealthCare> getHealthCareById(@PathVariable Long healthCareId) {
+        return new ResponseEntity<>(healthCareService.getHealthCareById(healthCareId), HttpStatus.OK);
+    }
+
     @GetMapping("/animal/{animalId}")
     public ResponseEntity<List<HealthCare>> getHealthCaresForAnimal(@PathVariable Long animalId) {
         return new ResponseEntity<>(healthCareService.getHealthCaresByAnimal(animalId), HttpStatus.OK);
